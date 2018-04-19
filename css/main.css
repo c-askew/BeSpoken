@@ -1,0 +1,12 @@
+h1 {
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+#signin {
+  width: 75vw;
+  margin: auto;
+}
