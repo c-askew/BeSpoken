@@ -12,38 +12,104 @@
   <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-database.js"></script>
   <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script>
-  <!-- <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-messaging.js"></script> -->
-  <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-functions.js"></script>
   <!--Materialize CSS-->
   <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <script type="text/javascript" src="scripts/materialize.min.js"></script>
   <!--CSS-->
   <link href="css/main.css" type="text/css" rel="stylesheet" media="screen,projection" />
-  </head>
+</head>
 <body>
   <h1 class="title">BeSpoken</h2>
-  <div id="signin">
-    <div class="form-title"><h2>Sign In</h2></div>
-    <div class="input-field active">
-      <input type="email" id="email" autocomplete="off"/>
-      <label class="active" for="email">Email</label>
+    <div id="signin">
+      <div class="form-title"><h2>Sign In</h2></div>
+      <div class="input-field active">
+        <input type="email" id="email" autocomplete="off"/>
+        <label class="active" for="email">Email</label>
+      </div>
+      <div class="input-field">
+        <input type="password" id="password"/>
+        <label class="active" for="password">Password</label>
+      </div>
+      <br />
+      <button class="login" id="login">Login</button>
+      <button class="signup" id="signup">Sign Up</button>
+      <br />
+      <button class="google" id="google">Sign In With Google</button>
     </div>
-    <div class="input-field">
-      <input type="password" id="password"/>
-      <label class="active" for="password">Password</label>
+
+
+    <div class="questionForm hide" id="questionForm">
+      <h2>Give us your Feedback</h2>
+      <h4>For the following, please rate out of 10.</h4>
+      <h4>0 - Poor | 10 - Great</h4>
+      <form class="col s12" autocomplete="off">
+        <div class="row" id="staffRating">
+          <p>How would you rate your experience with the member(s) of staff?</p>
+          <output class="col s1" id="staffOut">5</output>
+          <input class="col s11" id="staffIn" name="testing" type="range" min="0" max="10" step="1" oninput="staffOut.value = staffIn.value">
+          <span class="col s1"></span>
+          <span id="slider1" class="col s1"> 0</span>
+          <span class="col s4"></span>
+          <span id="slider5" class="col s1">5</span>
+          <span class="col s4"></span>
+          <span id="slider10" class="col s1">10</span>
+        </div>
+
+        <div class="row" id="overallRating">
+          <p>How would you rate your overall experience?</p>
+          <output class="col s1" id="overallOut">5</output>
+          <input class="col s11" id="overallIn" name="testing" type="range" min="0" max="10" step="1" oninput="overallOut.value = overallIn.value">
+          <span class="col s1"></span>
+          <span id="slider1" class="col s1"> 0</span>
+          <span class="col s4"></span>
+          <span id="slider5" class="col s1">5</span>
+          <span class="col s4"></span>
+          <span id="slider10" class="col s1">10</span>
+        </div>
+
+        <div class="row">
+          <p>What would you say you enjoyed most about your experience with us?</p>
+          <select id="enjoyedMost">
+            <option value="" disabled selected>Choose your option</option>
+            <option value="1">Presentation</option>
+            <option value="2">Activity</option>
+            <option value="3">Interaction</option>
+            <option value="4">N/A</option>
+          </select>
+          <label>Materialize Select</label>
+        </div>
+
+        <div class="row">
+          <p>What would you say you enjoyed least about your experience with us?</p>
+          <select id="enjoyedLeast">
+            <option value="" disabled selected>Choose your option</option>
+            <option value="1">Presentation</option>
+            <option value="2">Activity</option>
+            <option value="3">Interaction</option>
+            <option value="4">N/A</option>
+          </select>
+          <label>Materialize Select</label>
+        </div>
+
+        <div class="row">
+          <p>
+            Are there any comments or suggestions you would like to make in order to help us improve our service? Areas
+            you beleive we could improve on or things you would like to see more of etc.
+          </p>
+          <div class="input-field">
+            <textarea id="comments" class="materialize-textarea"></textarea>
+            <label for="comments">Any comments? Click here</label>
+          </div>
+        </div>
+      </form>
     </div>
-    <br />
-    <button class="login" id="login">Login</button>
-    <button class="signup" id="signup">Sign Up</button>
+    <button class="submit hide" id="submit">Submit</button>
     <button class="logout hide" id="logout">Logout</button>
-  </div>
 
-  <!--JS-->
-  <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
-  <script type="text/javascript" src="scripts/auth.js"></script>
-
-  <script>
+    <!--Firebase Init-->
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+    <script>
     // Initialize Firebase
     var config = {
       apiKey: "AIzaSyCDzkgh8m6uLPJR6eFSYmBqTC-uvq6TR-k",
@@ -55,5 +121,9 @@
     };
     firebase.initializeApp(config);
   </script>
+  <!--JS-->
+  <script type="text/javascript" src="scripts/moment.js"></script>
+  <script type="text/javascript" src="scripts/auth.js"></script>
+  <script type="text/javascript" src="scripts/form.js"></script>
 </body>
 </html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>BeSpoken Admin</title>
+  <!--JQuery-->
+  <script type="text/javascript" src="scripts/jquery-2.2.4.min.js"></script>
+  <!--Firebase CDNs-->
+  <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script>
+  <!--Materialize CSS-->
+  <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script type="text/javascript" src="scripts/materialize.min.js"></script>
+  <!--CSS-->
+  <link href="css/main.css" type="text/css" rel="stylesheet" media="screen,projection" />
+</head>
+<body>
+
+  <!--Firebase Init-->
+  <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+  <script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCDzkgh8m6uLPJR6eFSYmBqTC-uvq6TR-k",
+    authDomain: "bespoken-app.firebaseapp.com",
+    databaseURL: "https://bespoken-app.firebaseio.com",
+    projectId: "bespoken-app",
+    storageBucket: "bespoken-app.appspot.com",
+    messagingSenderId: "1002803635847"
+  };
+  firebase.initializeApp(config);
+</script>
+<!--JS-->
+<script type="text/javascript" src="scripts/moment.js"></script>
+<script type="text/javascript" src="scripts/admin.js"></script>
+</body>
+</html>

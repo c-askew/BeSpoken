@@ -6,7 +6,17 @@ h2 {
   font-size: 1.5rem;
 }
 
-#signin {
+h4 {
+  font-size: 0.7rem;
+  color: grey;
+}
+
+#signin , #questionForm {
   width: 75vw;
   margin: auto;
 }
+
+.row span { font-size: 0.8rem;}
+#slider1 { text-align: left; }
+#slider5 { text-align: center; }
+#slider10 { text-align: right; }
