@@ -20,6 +20,29 @@
   <link href="css/main.css" type="text/css" rel="stylesheet" media="screen,projection" />
 </head>
 <body>
+  <h1>Admin Page</h1>
+  <body>
+    <h1 class="title">BeSpoken</h2>
+      <div id="signin">
+        <div class="form-title"><h2>Sign In</h2></div>
+        <div class="input-field active">
+          <input type="email" id="email" autocomplete="off"/>
+          <label class="active" for="email">Email</label>
+        </div>
+        <div class="input-field">
+          <input type="password" id="password"/>
+          <label class="active" for="password">Password</label>
+        </div>
+        <br />
+        <button class="login" id="login">Login</button>
+        <button class="signup" id="signup">Sign Up</button>
+        <br />
+        <button class="google" id="google">Sign In With Google</button>
+      </div>
+      <a href="index.html"><button class="admin" id="admin">Go to User</button></a>
+
+
+
 
   <!--Firebase Init-->
   <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
@@ -38,5 +61,6 @@
 <!--JS-->
 <script type="text/javascript" src="scripts/moment.js"></script>
 <script type="text/javascript" src="scripts/admin.js"></script>
+<script type="text/javascript" src="scripts/authAdmin.js"></script>
 </body>
 </html>
