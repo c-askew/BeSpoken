@@ -60,16 +60,10 @@ const questionForm = document.getElementById("questionForm");
 firebase.auth().onAuthStateChanged(firebaseUser => {
   if(firebaseUser) {
     console.log(firebaseUser);
-    signinForm.classList.add('hide');
     btnLogout.classList.remove('hide');
-    btnSubmit.classList.remove('hide');
-    questionForm.classList.remove('hide');
     initAdmin();
   } else {
     console.log('Not Logged In');
-    signinForm.classList.remove('hide');
     btnLogout.classList.add('hide');
-    btnSubmit.classList.add('hide');
-    questionForm.classList.add('hide');
   }
 });

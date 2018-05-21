@@ -1,3 +1,16 @@
+$(document).ready(function() {
+  $('select').material_select();
+  initForm();
+});
+
+const btnSubmit = document.getElementById("submit");
+const btnLogout = document.getElementById("logout");
+
+//Creates the logout event
+btnLogout.addEventListener('click', e => {
+  firebase.auth().signOut();
+});
+
 function initForm() {
   var database = firebase.database();
   var user = firebase.auth().currentUser;
@@ -9,7 +22,7 @@ function initForm() {
   const elComments = document.getElementById("comments");
 
   btnSubmit.addEventListener('click',
-    e => getFeedback(user, elStaffRating, elOverallRating, elEnjoyedMost, elEnjoyedLeast, elComments));
+  e => getFeedback(user, elStaffRating, elOverallRating, elEnjoyedMost, elEnjoyedLeast, elComments));
 }
 
 function getFeedback(user, elStaffRating, elOverallRating, elEnjoyedMost, elEnjoyedLeast, elComments) {
@@ -46,3 +59,10 @@ function saveFeedback(userId, staff, overall, best, worst, comment) {
     comments: comment
   });
 }
+
+firebase.auth().onAuthStateChanged(firebaseUser => {
+  if(firebaseUser) { }
+  else {
+    window.location.href = "index.html"
+  }
+});

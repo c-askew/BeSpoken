@@ -1,3 +1,5 @@
+body { font-family: 'Roboto', sans-serif; }
+
 h1 {
   text-align: center;
 }
@@ -6,11 +8,88 @@ h2 {
   font-size: 1.5rem;
 }
 
+h3 {
+  text-align: center;
+  font-size: 0.8rem;
+}
+
 h4 {
   font-size: 0.7rem;
   color: grey;
 }
 
+.logo-top {
+  display: block;
+  margin: 25px auto;
+}
+
+/* Unplug CSS */
+.unplugBg {
+  background-color: #000;
+}
+
+.unplugLogo {
+  height: 200px;
+}
+
+.unplugButton {
+  color: #000;
+  font-size: 1.1rem;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 10px;
+  margin: 0 10px;
+  width: 20vw;
+  border: none;
+}
+
+/* Choices Page */
+.choices {
+  text-align: center;
+}
+
+.choiceBox {
+  display: inline-block;
+  width: 40%;
+  margin: 20px;
+  /* border: 2px solid #45D6BC; */
+  border-radius: 15px;
+  box-shadow: 4px 4px #eee;
+}
+
+.choiceBox:hover {
+  box-shadow: 4px 4px #45D6BC;
+}
+
+.choiceBox img {
+  width: 100%;
+}
+
+/* Signin */
+
+.input-field label {
+  color: #45D6BC;
+}
+.input-field input:focus + label {
+  color: #45D6BC !important;
+}
+.input-field input:focus, .materialize-textarea:focus:not([readonly]) {
+  border-bottom: 1px solid #45D6BC !important;
+  box-shadow: 0 1px 0 0 #45D6BC !important;
+}
+/*Autofill Overwrite to remove yellow background*/
+@-webkit-keyframes autofill {
+    to {
+        background: transparent;
+    }
+}
+input:-webkit-autofill {
+    -webkit-animation-name: autofill;
+    -webkit-animation-fill-mode: both;
+}
+
+
+/* Survey Pages */
 #signin , #questionForm {
   width: 75vw;
   margin: auto;
@@ -20,3 +99,77 @@ h4 {
 #slider1 { text-align: left; }
 #slider5 { text-align: center; }
 #slider10 { text-align: right; }
+
+/* Admin Page */
+.scores {
+  display: flex;
+  width: 75vw;
+  margin: auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.scoreLabel {
+  width: 50%;
+  margin: auto;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.scoreCircle {
+  width: 50%;
+  font-size: 2.9rem;
+}
+
+.circle {
+  color: #fff;
+  width: 40%;
+  margin: auto;
+  text-align: center;
+  line-height: 130px;
+  background-color: #45D6BC;
+  /* border: 2px solid #45D6BC; */
+  border-radius: 150px;
+  box-shadow: 4px 4px #eee;
+}
+
+.bespokenButton {
+  color: #fff;
+  font-size: 1.2rem;
+  background-color: #45D6BC;
+  border-radius: 20px;
+  padding: 10px;
+  width: 25vw;
+  border: none;
+  box-shadow: 2px 2px #fff;
+}
+
+.bespokenFormButton {
+  color: #fff;
+  font-size: 1.1rem;
+  background-color: #45D6BC;
+  border-radius: 20px;
+  padding: 10px;
+  margin: 0 10px;
+  width: 20vw;
+  border: none;
+  box-shadow: 2px 2px #ddd;
+}
+
+.threeButtons {
+  text-align: center;
+}
+
+.content {
+  min-height: calc(100vh - 100px)
+}
+
+footer {
+  padding: 1rem;
+  background-color: #efefef;
+  text-align: center;
+}
+
+footer.unplugFooter {
+  background-color: #111;
+}

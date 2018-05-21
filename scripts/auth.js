@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $('select').material_select();
+    Materialize.updateTextFields();
 });
 
 //Assign Elements
@@ -9,7 +9,7 @@ const btnLogin = document.getElementById("login");
 const btnLogout = document.getElementById("logout");
 const btnSignup = document.getElementById("signup");
 const btnGoogle = document.getElementById("google");
-const btnSubmit = document.getElementById("submit");
+
 
 //Create Email Login Event
 btnLogin.addEventListener('click', e=> {
@@ -28,11 +28,6 @@ btnSignup.addEventListener('click', e=> {
   const promise = auth.createUserWithEmailAndPassword(email,pass);
   promise.catch(e => console.log(e.message));
 
-});
-
-//Creates the logout event
-btnLogout.addEventListener('click', e => {
-  firebase.auth().signOut();
 });
 
 //Create Google Event
@@ -59,17 +54,6 @@ const questionForm = document.getElementById("questionForm");
 //Realtime Listener to manage elements based on current status
 firebase.auth().onAuthStateChanged(firebaseUser => {
   if(firebaseUser) {
-    console.log(firebaseUser);
-    signinForm.classList.add('hide');
-    btnLogout.classList.remove('hide');
-    btnSubmit.classList.remove('hide');
-    questionForm.classList.remove('hide');
-    initForm();
-  } else {
-    console.log('Not Logged In');
-    signinForm.classList.remove('hide');
-    btnLogout.classList.add('hide');
-    btnSubmit.classList.add('hide');
-    questionForm.classList.add('hide');
-  }
+    window.location.href = "userSelect.html"
+  } else {  }
 });

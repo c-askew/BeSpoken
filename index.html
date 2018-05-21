@@ -8,10 +8,11 @@
   <!--JQuery-->
   <script type="text/javascript" src="scripts/jquery-2.2.4.min.js"></script>
   <!--Firebase CDNs-->
+  <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
   <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-auth.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-database.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script>
+  <!--Firebase Init-->
+  <script type="text/javascript" src="scripts/firebaseInit.js"></script>
   <!--Materialize CSS-->
   <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -20,27 +21,29 @@
   <link href="css/main.css" type="text/css" rel="stylesheet" media="screen,projection" />
 </head>
 <body>
-  <h1 class="title">BeSpoken</h2>
+  <div class="content">
+  <img src="assets/bespoken-logo.png" class="title logo-top" />
     <div id="signin">
       <div class="form-title"><h2>Sign In</h2></div>
-      <div class="input-field active">
-        <input type="email" id="email" autocomplete="off"/>
-        <label class="active" for="email">Email</label>
+      <div class="input-field">
+        <input type="email" placeholder="john@example.com" id="email" autocomplete="off"/>
+        <label for="email">Email</label>
       </div>
       <div class="input-field">
-        <input type="password" id="password"/>
-        <label class="active" for="password">Password</label>
+        <input type="password" placeholder="*****" id="password"/>
+        <label for="password">Password</label>
       </div>
       <br />
-      <button class="login" id="login">Login</button>
-      <button class="signup" id="signup">Sign Up</button>
-      <br />
-      <button class="google" id="google">Sign In With Google</button>
+      <div class="threeButtons">
+      <button class="bespokenFormButton login" id="login">Login</button>
+      <button class="bespokenFormButton signup" id="signup">Sign Up</button>
+      <button class="bespokenFormButton google" id="google">Sign In With Google</button>
+      </div>
     </div>
-    <a href="admin.html"><button class="admin" id="admin">Go to Admin</button></a>
 
 
-    <div class="questionForm hide" id="questionForm">
+  </div>
+    <!-- <div class="questionForm hide" id="questionForm">
       <h2>Give us your Feedback</h2>
       <h4>For the following, please rate out of 10.</h4>
       <h4>0 - Poor | 10 - Great</h4>
@@ -104,27 +107,14 @@
           </div>
         </div>
       </form>
-    </div>
-    <button class="submit hide" id="submit">Submit</button>
-    <button class="logout hide" id="logout">Logout</button>
-
-    <!--Firebase Init-->
-    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
-    <script>
-    // Initialize Firebase
-    var config = {
-      apiKey: "AIzaSyCDzkgh8m6uLPJR6eFSYmBqTC-uvq6TR-k",
-      authDomain: "bespoken-app.firebaseapp.com",
-      databaseURL: "https://bespoken-app.firebaseio.com",
-      projectId: "bespoken-app",
-      storageBucket: "bespoken-app.appspot.com",
-      messagingSenderId: "1002803635847"
-    };
-    firebase.initializeApp(config);
-  </script>
+    </div> -->
+    <footer>
+      <a href="admin.html"><button class="bespokenButton admin" id="admin">Go to Admin</button></a>
+      <button class="bespokenButton submit hide" id="submit">Submit</button>
+      <button class="bespokenButton logout hide" id="logout">Logout</button>
+    </footer>
   <!--JS-->
   <script type="text/javascript" src="scripts/moment.js"></script>
   <script type="text/javascript" src="scripts/auth.js"></script>
-  <script type="text/javascript" src="scripts/form.js"></script>
 </body>
 </html>
