@@ -1,3 +1,12 @@
+@font-face {
+    font-family: 't-star-mono';
+    src: url('../fonts/t-starmonoround-webfont.woff2') format('woff2'),
+         url('../fonts/t-starmonoround-webfont.woff') format('woff'),
+         url('../fonts/t-starmonoround-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body { font-family: 'Roboto', sans-serif; }
 
 h1 {
@@ -20,8 +29,11 @@ h4 {
 
 .logo-top {
   display: block;
-  margin: 25px auto;
+  margin: 0 auto;
+  padding-top: 25px;
 }
+
+
 
 /* Unplug CSS */
 .unplugBg {
@@ -34,7 +46,9 @@ h4 {
 
 .unplugButton {
   color: #000;
+  font-family: 't-star-mono', sans-serif;
   font-size: 1.1rem;
+  line-height: 1.4rem;
   background-color: #fff;
   border-radius: 20px;
   padding: 10px;
@@ -42,6 +56,62 @@ h4 {
   width: 20vw;
   border: none;
 }
+
+.unplugQuestion {
+  font-family: 't-star-mono', sans-serif;
+  font-size: 1.1rem;
+  color: #fff;
+  text-align: center;
+}
+
+.unplugQuestion>p>i {
+  font-size: 1.8rem;
+}
+
+.unplugAnswers {
+  display: flex;
+  font-family: 't-star-mono', sans-serif;
+  color: #fff;
+  max-width: 85vw;
+  margin: auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.singleAnswer {
+  padding-top: 25px;
+  min-width: 30vw;
+  width: 50%;
+  margin: auto;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+[type="radio"] + label:before, [type="radio"] + label:after {
+  display: none;
+}
+
+input[type=radio]:checked + label>img {
+  box-shadow: 0 0 0 4px #fff;
+}
+
+.waitingScreen {
+  font-family: 't-star-mono', sans-serif;
+  color: #fff;
+  text-align: center;
+  padding-top: 20px;
+}
+
+#dataVid {
+    position: fixed;
+    left: -30vh;
+    top: 10vh;
+    max-width: 130%;
+    opacity: 0.2;
+    overflow: hidden;
+    z-index: -1;
+}
+
 
 /* Choices Page */
 .choices {
@@ -64,6 +134,8 @@ h4 {
 .choiceBox img {
   width: 100%;
 }
+
+
 
 /* Signin */
 
@@ -135,7 +207,8 @@ input:-webkit-autofill {
 
 .bespokenButton {
   color: #fff;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+  line-height: 1.4rem;
   background-color: #45D6BC;
   border-radius: 20px;
   padding: 10px;
@@ -147,6 +220,7 @@ input:-webkit-autofill {
 .bespokenFormButton {
   color: #fff;
   font-size: 1.1rem;
+  line-height: 1.4rem;
   background-color: #45D6BC;
   border-radius: 20px;
   padding: 10px;
@@ -161,11 +235,13 @@ input:-webkit-autofill {
 }
 
 .content {
-  min-height: calc(100vh - 100px)
+  min-height: calc(100vh - 70px)
 }
 
 footer {
+  box-sizing: border-box;
   padding: 1rem;
+  height: 70px;
   background-color: #efefef;
   text-align: center;
 }

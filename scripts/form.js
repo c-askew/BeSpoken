@@ -22,8 +22,8 @@ function initForm() {
   const elComments = document.getElementById("comments");
 
   btnSubmit.addEventListener('click',
-  e => getFeedback(user, elStaffRating, elOverallRating, elEnjoyedMost, elEnjoyedLeast, elComments));
-}
+    e => getFeedback(user, elStaffRating, elOverallRating, elEnjoyedMost, elEnjoyedLeast, elComments));
+  }
 
 function getFeedback(user, elStaffRating, elOverallRating, elEnjoyedMost, elEnjoyedLeast, elComments) {
   //Collects Data from document elements

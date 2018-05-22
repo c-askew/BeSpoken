@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>BeSpoken Admin</title>
+  <title>Unplug Survey</title>
   <!--JQuery-->
   <script type="text/javascript" src="scripts/jquery-2.2.4.min.js"></script>
   <!--Firebase CDNs-->
@@ -25,20 +25,112 @@
 <body class="unplugBg">
   <div class="content">
     <img src="assets/uploadunplug-black.png" class="title logo-top unplugLogo" />
-    <div class="questionForm" id="questionForm">
+    <div class="unplugSurvey" id="survey">
 
+      <div class="unplugQuestion" id="q1"><p>Which of these images do you most associate with <i>FEAR</i> ?</p>
+        <div class="unplugAnswers">
+          <div class="singleAnswer">
+            <input type="radio" name="fear" id="money1" value="Money" class="input-hidden" />
+            <label for="money1"><img src="assets/money.jpg" alt="Money"></label>
+          </div>
+          <div class="singleAnswer">
+            <input type="radio" name="fear" id="commitment1" value="Commitment" class="input-hidden" />
+            <label for="commitment1"><img src="assets/commitment.jpg" alt="Commitment" /></label>
+          </div>
+          <div class="singleAnswer">
+            <input type="radio" name="fear" id="spiders" value="Spiders" class="input-hidden" />
+            <label for="spiders"><img src="assets/spider.jpg" alt="Spider" /></label>
+          </div>
+          <div class="singleAnswer">
+            <input type="radio" name="fear" id="war1" value="War" class="input-hidden" />
+            <label for="war1"><img src="assets/war.jpg" alt="War" /></label>
+          </div>
+        </div>
+      </div>
+
+      <div class="unplugQuestion " id="q2"><p>Which of these images do you most associate with <i>ECSTASY</i> ?</p>
+        <div class="unplugAnswers">
+          <div class="singleAnswer">
+            <input type="radio" name="ecstasy" id="alcohol1" value="Alcohol" class="input-hidden" />
+            <label for="alcohol1"><img src="assets/alcohol.jpg" alt="Alcohol"></label>
+          </div>
+          <div class="singleAnswer">
+            <input type="radio" name="ecstasy" id="money2" value="Money" class="input-hidden" />
+            <label for="money2"><img src="assets/money.jpg" alt="Money" /></label>
+          </div>
+          <div class="singleAnswer">
+            <input type="radio" name="ecstasy" id="rollercoaster" value="Rollercoaster" class="input-hidden" />
+            <label for="rollercoaster"><img src="assets/rollercoaster.jpg" alt="Rollercoaster" /></label>
+          </div>
+          <div class="singleAnswer">
+            <input type="radio" name="ecstasy" id="war2" value="War" class="input-hidden" />
+            <label for="war2"><img src="assets/war.jpg" alt="War" /></label>
+          </div>
+        </div>
+      </div>
+
+      <div class="unplugQuestion " id="q3"><p>Which of these images do you most associate with <i>SADNESS</i> ?</p>
+        <div class="unplugAnswers">
+          <div class="singleAnswer">
+            <input type="radio" name="sadness" id="money3" value="Money" class="input-hidden" />
+            <label for="money3"><img src="assets/money.jpg" alt="Money"></label>
+          </div>
+          <div class="singleAnswer">
+            <input type="radio" name="sadness" id="kittens1" value="Kittens" class="input-hidden" />
+            <label for="kittens1"><img src="assets/kitten.jpg" alt="Kittens" /></label>
+          </div>
+          <div class="singleAnswer">
+            <input type="radio" name="sadness" id="alcohol2" value="Alcohol" class="input-hidden" />
+            <label for="alcohol2"><img src="assets/alcohol.jpg" alt="Alcohol" /></label>
+          </div>
+          <div class="singleAnswer">
+            <input type="radio" name="sadness" id="burger1" value="Burgers" class="input-hidden" />
+            <label for="burger1"><img src="assets/burger.jpg" alt="Burger" /></label>
+          </div>
+        </div>
+      </div>
+
+      <div class="unplugQuestion " id="q4"><p>Which of these images do you most associate with <i>LOVE</i> ?</p>
+        <div class="unplugAnswers">
+          <div class="singleAnswer">
+            <input type="radio" name="love" id="money4" value="Money" class="input-hidden" />
+            <label for="money4"><img src="assets/money.jpg" alt="Money"></label>
+          </div>
+          <div class="singleAnswer">
+            <input type="radio" name="love" id="commitment2" value="Commitment" class="input-hidden" />
+            <label for="commitment2"><img src="assets/commitment.jpg" alt="Commitment" /></label>
+          </div>
+          <div class="singleAnswer">
+            <input type="radio" name="love" id="burger2" value="Burgers" class="input-hidden" />
+            <label for="burger2"><img src="assets/burger.jpg" alt="Burgers" /></label>
+          </div>
+          <div class="singleAnswer">
+            <input type="radio" name="love" id="kittens2" value="Kittens" class="input-hidden" />
+            <label for="kittens2"><img src="assets/kitten.jpg" alt="Kittens" /></label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="waitingScreen hide" id="waiting">
+      <p>Thank you, your answers are being analysed.<br>
+      Please wait for further instruction.</p>
+      <video autoplay muted loop id="dataVid">
+        <source src="assets/data-overlay.mp4" type="video/mp4">
+      </video>
     </div>
 
 
-  </div>
+
+  </div> <!-- End of content -->
   <footer class="unplugFooter">
-    <button class="unplugButton submit" id="submit">Submit</button>
+    <button class="unplugButton" id="submit">Submit</button>
     <button class="unplugButton logout" id="logout">Logout</button>
   </footer>
 
 
   <!--JS-->
   <script type="text/javascript" src="scripts/moment.js"></script>
-  <script type="text/javascript" src="scripts/form.js"></script>
+  <script type="text/javascript" src="scripts/unplugForm.js"></script>
 </body>
 </html>
