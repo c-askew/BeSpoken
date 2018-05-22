@@ -62,6 +62,8 @@ h4 {
   font-size: 1.1rem;
   color: #fff;
   text-align: center;
+  max-width: 950px;
+  margin: auto;
 }
 
 .unplugQuestion>p>i {
@@ -80,11 +82,7 @@ h4 {
 
 .singleAnswer {
   padding-top: 25px;
-  min-width: 30vw;
-  width: 50%;
   margin: auto;
-  padding-bottom: 20px;
-  text-align: center;
 }
 
 [type="radio"] + label:before, [type="radio"] + label:after {
@@ -104,18 +102,58 @@ input[type=radio]:checked + label>img {
 
 #dataVid {
     position: fixed;
-    left: -30vh;
-    top: 10vh;
-    max-width: 130%;
+    margin: auto;
+    left: -5vw;
+    top: 15vh;
+    max-width: 100%;
     opacity: 0.2;
     overflow: hidden;
     z-index: -1;
 }
 
+.viewBox {
+  height: 100%;
+  z-index: 2;
+}
+
+.feelingBox {
+  width: 45vw;
+  margin: auto;
+  font-family: 't-star-mono', sans-serif;
+  color: #fff;
+  text-align: center;
+}
+
+.feelingBox>img {
+  width: 100%;
+}
+
+.feelingBox>p {
+  font-size: 2.5rem;
+  padding-top: 5vh;
+}
+
+.leftAlign {
+  font-size: 2.5rem;
+  float: left;
+  cursor: pointer;
+}
+
+.rightAlign {
+  font-size: 2.5rem;
+  float: right;
+  cursor: pointer;
+}
+
+
+
+
 
 /* Choices Page */
 .choices {
   text-align: center;
+  margin: auto;
+  max-width: 850px;
 }
 
 .choiceBox {

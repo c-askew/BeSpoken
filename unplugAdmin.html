@@ -23,24 +23,28 @@
   <link href="css/main.css" type="text/css" rel="stylesheet" media="screen,projection" />
 </head>
 <body class="unplugBg">
-  <div class="content">
-    <img src="assets/uploadunplug-black.png" class="title logo-top" />
+  <div class="content vidBackground">
+    <img src="assets/uploadunplug-black.png" class="title logo-top unplugLogo" />
 
-
+    <div class="videoBg">
     <video autoplay muted loop id="dataVid">
       <source src="assets/data-overlay.mp4" type="video/mp4">
     </video>
+    </div>
 
-
-
+      <div class="feelingBox" id="box1"><p>Fear</p><img src="" id="fear">
+        <div class="controls"><p><a class="leftAlign" onclick="imageLeft(1)"><<<<<</a><a class="rightAlign" onclick="imageRight(1)"> >>>>></a></p></div>
+      </div>
+      <div class="feelingBox hide" id="box2"><p>Ecstasy</p><img src="" id="ecstasy">
+        <div class="controls"><p><a class="leftAlign" onclick="imageLeft(2)"><<<<<</a><a class="rightAlign" onclick="imageRight(2)"> >>>>></a></p></div>
+      </div>
+      <div class="feelingBox hide" id="box3"><p>Sadness</p><img src="" id="sadness">
+        <div class="controls"><p><a class="leftAlign" onclick="imageLeft(3)"><<<<<</a><a class="rightAlign" onclick="imageRight(3)"> >>>>></a></p></div>
+      </div>
+      <div class="feelingBox hide" id="box4"><p>Love</p><img src="" id="love">
+        <div class="controls"><p><a class="leftAlign" onclick="imageLeft(4)"><<<<<</a><a class="rightAlign" onclick="imageRight(4)"> >>>>></a></p></div>
+      </div>
   </div>
-
-
-
-
-
-
-
 
   <footer class="unplugFooter">
     <button class="unplugButton logout" id="logout">Logout</button>

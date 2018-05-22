@@ -27,7 +27,11 @@ function initForm() {
 
 function getFeedback(user, elStaffRating, elOverallRating, elEnjoyedMost, elEnjoyedLeast, elComments) {
   //Collects Data from document elements
-  var uid = user.uid;
+  if (user == null) {
+    var uid = Math.floor((Math.random() * 100000000) + 1);
+  } else {
+    var uid = user.uid;
+  }
   var staffRating = elStaffRating.innerHTML;
   var overallRating = elOverallRating.innerHTML;
   var enjoyedMost = elEnjoyedMost.options[elEnjoyedMost.selectedIndex].text;
